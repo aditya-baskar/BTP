@@ -32,7 +32,7 @@ def create_astar_board(board, vision, pos):
             flag = 1
             if i in range(max(pos[0]-vision, 0), min(pos[0]+vision, 19)+1):
                 if j in range(max(pos[1]-vision, 0), min(pos[1]+vision, 19)+1):
-                    if board[i][j] != 9999999999999:
+                    if board[i][j] == 'o' or board[i][j] == 'e':
                         flag = 0
             board[i][j] = flag 
     board[pos[0]][pos[1]] = 0
@@ -40,10 +40,21 @@ def create_astar_board(board, vision, pos):
 
 
 def move(previous_pos, exit_pos, speed, vision, board):
+    original_board = []
+    for i in range(len(board)):
+        original_board.append([])
+        for j in range((len(board[i]))):
+            original_board[i].append(board[i][j])
+    #print original_board
     new_board = change_board(vision, board, previous_pos, exit_pos)
     target_pos = get_min(new_board, vision, previous_pos)
-    new_board = create_astar_board(board, vision, previous_pos)
+    new_board = create_astar_board(original_board, vision, previous_pos)
+    for i in new_board:
+        print i
     path = astar.astar(numpy.array(new_board), previous_pos, target_pos)
+    path.reverse()
+    print path
+    #print path
     return path[min(speed, len(path)-1)]
     """
     Q = Set([])

@@ -1,3 +1,5 @@
+import portalocker
+
 global exits
 
 def RepresentsInt(s):
@@ -72,3 +74,4 @@ def print_board(board):
 	str_format = reduce((lambda x,y: x+'\n'+y), list(map(lambda row: reduce((lambda x,y: x+','+y), row), board)))
 	f.write(str_format)
 	f.close()
+	

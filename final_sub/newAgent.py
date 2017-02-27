@@ -10,28 +10,31 @@ blocked_exits = set()
 class MyAgent(spade.Agent.Agent):
 	class MoveBehav(spade.Behaviour.PeriodicBehaviour):		
 		def onStart(self):
-			print "Starting behaviour . . ."
+			#print "Starting behaviour . . ."
 			#set the initial exit time to 0.
 			global speed, vision
+			global agent_id
 			speed = random.randrange(3) + 1
-			vision = speed + random.randrange(3) + 1
+			#print "agent" + str(agent_id) + ": " + str(speed)
+			vision = 20
 			self.exit_time = 0
 
 		def _onTick(self):
 			global board, agent_id, blocked_exits, speed, vision
 			prev_pos = get_position(agent_id)
 			e = get_closest_exit(prev_pos, blocked_exits)
-			board = get_board()
 			visited = []
 			for i in xrange(20):
 				visited.append([])
 				for j in xrange(20):
 					visited[i].append(0)
-			pos = move(prev_pos, e, speed, vision, board)
+			print "agent" + str(agent_id) + ": "
 			board = get_board()
+			pos = move(prev_pos, e, speed, vision, board)
 			if pos == (-1,-1):
 				blocked_exits.add(e)
 			else:
+				board = get_board()
 				board[prev_pos[0]][prev_pos[1]] = 'o'
 				if pos != e:
 					board[pos[0]][pos[1]] = str(agent_id)
@@ -97,7 +100,7 @@ class MyAgent(spade.Agent.Agent):
 
 
 	def _setup(self):
-		print "MyAgent starting . . ."
+		#print "MyAgent starting . . ."
 		move_behav = self.MoveBehav(1)
 		self.addBehaviour(move_behav, None)
 

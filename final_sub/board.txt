@@ -5,10 +5,10 @@ o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o
 o,o,o,o,o,o,x,o,o,o,o,o,o,o,o,o,x,o,o,o
 o,o,o,o,o,o,o,o,o,o,x,o,o,o,o,o,o,o,o,o
 o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o
-o,o,o,o,o,o,x,o,o,3,o,o,o,o,o,o,o,o,o,o
-o,7,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o
-e,o,o,o,o,5,1,o,o,6,o,o,o,o,o,o,o,o,o,e
-o,o,o,o,o,o,o,o,o,9,o,o,o,o,o,o,o,o,o,o
+o,o,o,o,o,o,x,o,o,o,o,o,o,o,o,o,o,o,o,o
+o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o
+e,o,o,4,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,e
+o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o
 o,o,o,o,o,x,o,o,o,o,o,o,o,o,o,o,o,o,o,o
 o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,x,o,o
 o,o,o,o,o,o,o,o,o,x,o,o,o,o,o,o,o,o,o,o

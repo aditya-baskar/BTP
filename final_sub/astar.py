@@ -56,8 +56,8 @@ def astar(array, start, goal):
 
 '''Here is an example of using my algo with a numpy array,
    astar(array, start, destination)
-   astar function returns a list of points (shortest path)
-
+   astar function returns a list of points (shortest path)'''
+'''
 nmap = numpy.array([
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0],
     [1,1,1,1,1,1,1,1,1,1,1,1,0,1],
